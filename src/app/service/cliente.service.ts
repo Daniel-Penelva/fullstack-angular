@@ -23,6 +23,11 @@ export class ClienteService {
     return this.http.post<Cliente>(this.url + '/create', objCliente);
   }
 
+  // Método para editar cliente
+  editar(objCliente: Cliente):Observable<Cliente>{
+    return this.http.put<Cliente>(this.url + '/editar', objCliente);
+  }
+
 }
 
 /* HttpClient - responsável por realizar as requisições */
