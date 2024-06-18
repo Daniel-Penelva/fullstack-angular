@@ -28,6 +28,11 @@ export class ClienteService {
     return this.http.put<Cliente>(this.url + '/editar', objCliente);
   }
 
+  // Método para remover cliente
+  remover(codigo: number):Observable<void>{
+    return this.http.delete<void>(this.url + '/deletar/' + codigo);
+  }
+
 }
 
 /* HttpClient - responsável por realizar as requisições */
