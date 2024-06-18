@@ -15,6 +15,9 @@ export class PrincipalComponent {
   // Variável para visibilidde dos botões
   btnCadastro: boolean = true;
 
+  // Variável visibilidade da tabela
+  tabela: boolean = true;
+
   // Json de lista de clientes
   clientes: Cliente[] = [];
 
@@ -44,6 +47,18 @@ export class PrincipalComponent {
       // add mensagem
       alert('Cliente cadastrado com sucesso!')
     });
+  }
+
+  // Método para selecionar um cliente especifico
+  selecionarCliente(posicao:number):void{
+    //Selecionar cliente
+    this.cliente = this.clientes[posicao];
+
+    // Visibilidade dos botões
+    this.btnCadastro = false;
+
+    // Visibilidade da tabela
+    this.tabela = false;
   }
 
 }
