@@ -9,6 +9,9 @@ import { ClienteService } from '../service/cliente.service';
 })
 export class PrincipalComponent {
 
+  // Criando objeto do tipo cliente
+  cliente = new Cliente();
+
   // Variável para visibilidde dos botões
   btnCadastro: boolean = true;
 

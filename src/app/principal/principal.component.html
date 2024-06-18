@@ -3,9 +3,9 @@
 <form>
     <img src="assets/img/icon_user.png" alt="icone usuario">
 
-    <input type="text" name="nome" placeholder="Entre com o nome" class="form-control">
-    <input type="number" name="idade" placeholder="Entre com a idade" class="form-control">
-    <input type="text" name="cidade" placeholder="Entre com a cidade" class="form-control">
+    <input type="text" name="nome" [(ngModel)]="cliente.nome" placeholder="Entre com o nome" class="form-control">
+    <input type="number" name="idade" [(ngModel)]="cliente.idade" placeholder="Entre com a idade" class="form-control">
+    <input type="text" name="cidade" [(ngModel)]="cliente.cidade" placeholder="Entre com a cidade" class="form-control">
 
     <input type="button" value="Cadastrar" *ngIf="btnCadastro" class="btn btn-primary">
     <input type="button" value="Alterar" *ngIf="!btnCadastro" class="btn btn-warning">
@@ -14,7 +14,7 @@
 </form>
 
 <h1>Tabela de Cadastro</h1>
-
+<p>{{ cliente | json }}</p>
 <table class="table table-striped">
     <thead class="thead-dark">
       <tr>
