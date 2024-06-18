@@ -32,3 +32,27 @@ input[type="button"]{
 input::placeholder{
     font-weight: 500;
 }
+
+table{
+    width: 600px;
+    margin: 30px auto;               /* "auto" centraliza a tabela */ 
+    text-align: center;
+    border-collapse: collapse;       /* Colapsa as linhas da tabela */
+}
+
+.thead-dark{
+    background-color: #212121;     /* Cor de fundo da tabela */
+    color: #fff;                   /* Cor da legenda da tabela */
+}
+
+th, td{
+    border: 1px solid #ddd;        /* Bordas da tabela */
+    padding: 10px;                   /* Espaçamento entre as células */
+    text-align: left;                /* Alinhamento da legenda */
+    border-collapse: collapse;       /* Colapsa as linhas da tabela */
+}
+
+th{
+    background-color: #212121;     /* Cor de fundo da legenda */
+    color: #fff;                   /* Cor da legenda */
+}
