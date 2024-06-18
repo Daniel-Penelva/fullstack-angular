@@ -33,4 +33,11 @@ export class PrincipalComponent {
     this.clienteService.selecionar().subscribe(retorno => this.clientes = retorno);
   }
 
+  // Método para cadastrar cliente
+  cadastrar():void{
+    this.clienteService.cadastrar(this.cliente).subscribe(retorno => {
+      this.clientes.push(retorno);
+    });
+  }
+
 }

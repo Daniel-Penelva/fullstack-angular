@@ -7,14 +7,14 @@
     <input type="number" name="idade" [(ngModel)]="cliente.idade" placeholder="Entre com a idade" class="form-control">
     <input type="text" name="cidade" [(ngModel)]="cliente.cidade" placeholder="Entre com a cidade" class="form-control">
 
-    <input type="button" value="Cadastrar" *ngIf="btnCadastro" class="btn btn-primary">
+    <input type="button" value="Cadastrar" *ngIf="btnCadastro" (click)="cadastrar()" class="btn btn-primary">
     <input type="button" value="Alterar" *ngIf="!btnCadastro" class="btn btn-warning">
     <input type="button" value="Remover" *ngIf="!btnCadastro" class="btn btn-danger">
     <input type="button" value="Cancelar" *ngIf="!btnCadastro" class="btn btn-dark">
 </form>
 
 <h1>Tabela de Cadastro</h1>
-<p>{{ cliente | json }}</p>
+
 <table class="table table-striped">
     <thead class="thead-dark">
       <tr>
