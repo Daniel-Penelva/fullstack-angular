@@ -86,4 +86,30 @@ export class PrincipalComponent {
       alert('Cliente alterado com sucesso!');
     });
   }
+
+  // Método para remover cliente
+  remover():void{
+    this.clienteService.remover(this.cliente.id).subscribe(retorno => {
+
+      // Obter a posição do vetor do cliente
+      let posicao = this.clientes.findIndex(obj => {
+        return obj.id == this.cliente.id;
+      });
+
+      // deletar os dados do cliente no vetor
+      this.clientes.splice(posicao, 1);
+
+      // Limpar formulário
+      this.cliente = new Cliente();
+
+      // Visibilidade dos botões
+      this.btnCadastro = true;
+
+      // Visibilidade da tabela
+      this.tabela = true;
+
+      // add mensagem
+      alert('Cliente removido com sucesso!');
+    });
+  }
 }
