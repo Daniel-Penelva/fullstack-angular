@@ -1,0 +1,47 @@
+Observable e Subscribe
+
+O método “subscribe()” é fundamental quando se trabalha com Observables no RxJS. Ele permite que você se inscreva em um Observable e receba os 
+dados emitidos por ele.
+
+No contexto do RxJS, o método `subscribe()` é usado para se inscrever em um Observable, ou seja, para começar a receber os dados emitidos por 
+ele.
+
+Primeiro, você precisa ter um “Observable” que representa algum tipo de fluxo de dados ou evento que você quer monitorar. Esse “Observable” é a 
+"fonte" de informações.
+
+Depois, você usa o método “subscribe()” para se inscrever nesse “Observable” e começar a receber os dados ou eventos que ele emite.
+
+Então, a sequência típica é:
+
+    1. Criar um Observable que representa o fluxo de dados ou eventos que você quer monitorar.
+    2. Usar o subscribe() para se inscrever nesse Observable e começar a receber os dados ou eventos emitidos.
+
+Dessa forma, você separa a "fonte" de dados (o Observable) do "consumidor" desses dados (o subscribe). Isso torna seu código mais modular, 
+flexível e fácil de manter.
+
+Você pode ter vários "assinantes" (clientes que fazem o subscribe) inscritos no mesmo Observable, e cada um deles receberá as mesmas informações 
+em tempo real. Podemos citar como exemplo o canal de algum youtube que seria o observable e os inscritos que seriam os subscribes.
+
+Essa é a essência da programação reativa com RxJS: criar fluxos de dados (Observable) e permitir que diferentes partes da sua aplicação se 
+inscrevam nesses fluxos para receber as informações de que precisam.
+
+Exemplo Conceitual Subscribe:
+
+Imagine que você é o gerente de uma loja de eletrônicos. Você recebe constantemente novos produtos dos fornecedores e precisa manter seus 
+clientes informados sobre essas novidades.
+
+Observable
+O Observable é como um "canal de notícias" que você estabelece na sua loja. Esse canal é responsável por transmitir informações sobre os novos 
+produtos que chegam. Sempre que um novo produto chega, o Observable "emite" essa informação.
+
+Você pode pensar no Observable como uma espécie de "fluxo de dados" que está sempre ativo, esperando por novos eventos (novos produtos) para 
+serem transmitidos.
+
+Subscribe
+O subscribe é como um "assinante" desse canal de notícias. Seus clientes (que são os "assinantes") se inscrevem nesse Observable para receber as 
+informações sobre os novos produtos.
+
+Quando um cliente se inscreve (faz o subscribe) no Observable, ele está dizendo: "Eu quero receber todas as informações sobre os novos produtos 
+que chegarem na sua loja".
+
+Sempre que um novo produto chega, o Observable "emite" essa informação, e todos os clientes inscritos (que fizeram o subscribe) são notificados.
