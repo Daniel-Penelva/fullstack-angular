@@ -8,15 +8,16 @@ import { Cliente } from '../model/Cliente';
 })
 export class ClienteService {
 
-  // URL da API - corresponde a mesma url definida na api do SpringBoot
-  private url: string = 'http://localhost:8080/selecionar';
+  // URL da API
+  private url: string = 'http://localhost:8080';
 
   constructor(private http: HttpClient) { }
 
   // Método para buscar todos os clientes
   selecionar():Observable<Cliente[]>{
-    return this.http.get<Cliente[]>(this.url);
+    return this.http.get<Cliente[]>(this.url + '/selecionar');
   }
+
 }
 
 /* HttpClient - responsável por realizar as requisições */
