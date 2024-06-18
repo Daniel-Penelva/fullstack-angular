@@ -8,8 +8,8 @@ import { Cliente } from '../model/Cliente';
 })
 export class ClienteService {
 
-  // URL da API
-  private url: string = 'http://localhost:8080';
+  // URL da API - corresponde a mesma url definida na api do SpringBoot
+  private url: string = 'http://localhost:8080/selecionar';
 
   constructor(private http: HttpClient) { }
 

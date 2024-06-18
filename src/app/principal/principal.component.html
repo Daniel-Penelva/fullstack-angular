@@ -18,6 +18,8 @@
 <table class="table table-striped">
     <thead class="thead-dark">
       <tr>
+        <th scope="col">Indice</th>
+        <th scope="col">Id</th>
         <th scope="col">Nome</th>
         <th scope="col">Idade</th>
         <th scope="col">Cidade</th>
@@ -25,11 +27,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Daniel</td>
-        <td>34</td>
-        <td>Rio de Janeiro</td>
-        <td></td>
+      <tr *ngFor="let cliente of clientes; index as i">
+        <td>{{ i+1 }}</td>
+        <td>{{ cliente.id }}</td>
+        <td>{{ cliente.nome }}</td>
+        <td>{{ cliente.idade }}</td>
+        <td>{{ cliente.cidade }}</td>
+        <td><button type="button" class="btn btn-success">Selecionar</button></td>
       </tr>
     </tbody>
 </table>
