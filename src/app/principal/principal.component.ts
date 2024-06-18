@@ -20,6 +20,11 @@ export class PrincipalComponent {
 
   }
 
+  // Método de inicialização
+  ngOnInit(): void {
+    this.selecionar();
+  }
+
   // Método para buscar todos os clientes
   selecionar():void{
     this.clienteService.selecionar().subscribe(retorno => this.clientes = retorno);
