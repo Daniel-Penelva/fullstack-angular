@@ -112,4 +112,16 @@ export class PrincipalComponent {
       alert('Cliente removido com sucesso!');
     });
   }
+
+  // Método para cancelar
+  cancelar():void{
+    // Limpar formulário
+    this.cliente = new Cliente();
+
+    // Visibilidade dos botões
+    this.btnCadastro = true;
+
+    // Visibilidade da tabela
+    this.tabela = true;
+  }
 }
