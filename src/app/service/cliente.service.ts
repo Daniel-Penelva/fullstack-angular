@@ -18,6 +18,11 @@ export class ClienteService {
     return this.http.get<Cliente[]>(this.url + '/selecionar');
   }
 
+  // Método para cadastrar cliente
+  cadastrar(objCliente: Cliente):Observable<Cliente>{
+    return this.http.post<Cliente>(this.url + '/create', objCliente);
+  }
+
 }
 
 /* HttpClient - responsável por realizar as requisições */
