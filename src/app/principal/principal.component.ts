@@ -37,6 +37,12 @@ export class PrincipalComponent {
   cadastrar():void{
     this.clienteService.cadastrar(this.cliente).subscribe(retorno => {
       this.clientes.push(retorno);
+
+      // Limpar formulário
+      this.cliente = new Cliente();
+
+      // add mensagem
+      alert('Cliente cadastrado com sucesso!')
     });
   }
 
